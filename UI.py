@@ -17,6 +17,6 @@ class ComplexCalculatorUI:
         return num1, num2
 
     def out_display_result(self, result):
-        return f"The result is {result.real} + {result.imaginary} i."
+        return print(f"The result is {result.real} + {result.imaginary} i.")
 
 

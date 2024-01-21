@@ -4,12 +4,14 @@ from UI import ComplexCalculatorUI
 
 
 def main():
+
+    global result
     calculator = ComplexCalculator()
     ui = ComplexCalculatorUI(calculator)
 
     operation = input("Choose an operation ( + - * / ): ")
     if operation in ["+", "-", "*", "/"]:
-        num1, num2 = ComplexCalculatorUI.inp_nums()
+        num1, num2 = ui.inp_nums()
         if operation == "+":
             result = calculator.add(num1, num2)
         elif operation == "-":
@@ -23,3 +25,6 @@ def main():
 
     else:
         print("Invalid operation")
+
+if __name__ == "__main__":
+    main()
